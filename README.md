@@ -3,7 +3,7 @@ useful scripts. bash/python/etc.
 
 ---
 
-To remove Docker images that are not being used by any running containers, you can extend the script to include the `docker rmi` command for each unused image. Here’s how you can do it without using the `--force` option:
+remove Docker images that are not being used by any running containers
 
 ```bash
 docker images --format '{{.Repository}}:{{.Tag}} {{.ID}}' | while read image; do
